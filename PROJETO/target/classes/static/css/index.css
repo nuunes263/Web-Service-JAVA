@@ -1,0 +1,90 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+#empregados {
+  width: 50%;
+  height: 100vh;
+  float: left;
+  background-image: url("https://www.betterup.com/hubfs/group%20of%20business%20people%20having%20a%20meeting.jpg");
+}
+
+#times {
+  width: 50%;
+  height: 100vh;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: 178vh;
+  background-image: url("https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/The-Club-Badges-of-the-12-European-Super-League-te-f96ef5b9bedaef6138b1054107ffa68f.jpg");
+}
+
+.botao-page {
+  background-color: #fff;
+  color: #ed9c28;
+  padding: 5px 8px;
+  border: 1px solid #ed9c28;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-group {
+  margin: 15px 15px;
+}
+
+input[type="button"],
+button[type="submit"] {
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover,
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#btnCancelar {
+  background-color: #f44336;
+}
+
+#btnApagar {
+  background-color: rgb(53, 104, 2);
+}
+
+#btnCancelar:hover,
+#btnApagar:hover {
+  background-color: #d2ba0b;
+}
+
+/* Estilos para o botão "Novo" */
+.botao-page {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.botao-page:hover {
+  background-color: #0a2e55;
+}
+
+@media (max-width: 425px) {
+  #empregados,
+  #times {
+    margin: 15px 15px 15px 15px;
+    width: 90%;
+    float: none;
+    border-radius: 18px;
+  }
+}

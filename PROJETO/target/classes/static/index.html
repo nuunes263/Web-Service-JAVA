@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+</head>
+<body>
+    <main>
+        <div id="empregados">
+            <button class="botao-page" onclick="enablePage()">Empregados</button>
+            <div id="resultado" style="display:none;">
+                <h1 style="font-size: 25px; margin: 15px 15px 50px 15px;"><b>Gerenciamento de Empregados</b></h1>
+
+                <div>
+                    <form id="formulario" style="display: none" onsubmit="salvarEmpregado()">
+                        <input
+                                class="botao-page"
+                                type="button"
+                                value="Novo"
+                                onclick="novoEmpregado()"
+                        />
+
+                        <div class="form-group">
+                            <label for="txtNome">Nome</label>
+                            <input type="text" id="txtNome" name="nome" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtCargo">Cargo</label>
+                            <input type="text" id="txtCargo" name="cargo" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtSalario">Salário</label>
+                            <input type="text" id="txtSalario" name="salario" />
+                        </div>
+
+
+                        <input
+                                type="button"
+                                value="Cancelar"
+                                onclick="cancelarCadastro()"
+                                id="btnCancelar"
+                        />
+                        <input
+                                type="button"
+                                value="Apagar"
+                                onclick="fazDelete()"
+                                id="btnApagar"
+                        />
+                        <button type="submit">Salvar</button>
+
+                    </form>
+                </div>
+
+                <table class = "table is-hoverable" id="tabela-empregados" style="display: inline;">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <input class="botao-page" type="button" value="Novo" onclick="novoEmpregado()" id="btnNovo">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                        <th>Salário</th>
+                    </tr>
+                    </tbody>
+                    <tbody id="corpoTabelaEmpregados"></tbody>
+                </table>
+            </div>
+        </div>
+        <div id="times">
+            <button class="botao-page" onclick="enablePageTimes()">Times</button>
+            <div id="resultado-times" style="display:none;">
+                <h1 style="font-size: 25px; margin: 15px 15px 50px 15px;"><b>Gerenciamento de Times</b></h1>
+                <table class = "table is-hoverable" id="tabela-times" style="display: inline;">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <input class="botao-page" type="button" value="Novo" onclick="novoTime()">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Ano De Fundação</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                    </tr>
+                    </tbody>
+                    <tbody id="corpoTabelaTimes"></tbody>
+                </table>
+                <div>
+
+                    <form id="formulario-times" style="display: none;" onsubmit="salvarTime()">
+                        <input class="botao-page" type="button" value="Novo" onclick="novoTime()">
+
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input type="text" id="txtNomeTime" name="Nome">
+                        </div>
+
+                        <div class="form-group" style="margin-right: 70px">
+                            <label>Ano Fundacao</label>
+                            <input type="text" id="txtAnoFundacao" name="anoFundacao">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cidade</label>
+                            <input type="text" id="txtCidade" name="cidade">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Estado</label>
+                            <input type="text" id="txtEstado" name="estado">
+                        </div>
+
+                        <input type="button" value="Cancelar" onclick="cancelarCadastroTime()" id="btnCancelar">
+                        <input type="button" value="Apagar" onclick="fazDeleteTime()" id="btnApagar">
+                        <button type="submit">Salvar</button>
+                    </form>
+                </div>
+
+
+
+            </div>
+        </div>
+    </main>
+
+    <script src="/jsEmployee/pageEmpregado.js"></script>
+    <script src="/jsTeams/pageTimes.js"></script>
+    <script src="/jsTeams/functionsTimes.js"></script>
+    <script src="/jsEmployee/functionsEmpregados.js"></script>
+</body>
+
+</html>
